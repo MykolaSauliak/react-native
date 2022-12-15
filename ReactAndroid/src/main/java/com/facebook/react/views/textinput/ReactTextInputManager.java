@@ -865,7 +865,7 @@ public class ReactTextInputManager extends BaseViewManager<ReactEditText, Layout
       //  the flags work out, the underlying field will end up a URI-type field.
       flagsToSet = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD;
     } else if (KEYBOARD_TYPE_URI.equalsIgnoreCase(keyboardType)) {
-      flagsToSet = InputType.TYPE_TEXT_VARIATION_URI;
+      flagsToSet = InputType.TYPE_TEXT_VARIATION_URI | InputType.TYPE_CLASS_TEXT;
     }
 
     updateStagedInputTypeFlag(view, InputType.TYPE_MASK_CLASS, flagsToSet);
